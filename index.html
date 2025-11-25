@@ -1,0 +1,79 @@
+<!-- File: index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>YouTube Clone — Light / Dark</title>
+
+    <!-- Google Fonts API -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon API (uses Google's favicon service for a recognizable look) -->
+    <link rel="icon" href="https://www.google.com/s2/favicons?domain=www.youtube.com&sz=64">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+    <header class="topbar">
+        <div class="left">
+            <button class="menu-btn" aria-label="menu" title="Menu">☰</button>
+            <a class="logo" href="#">
+                <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                    <rect width="24" height="24" rx="4" fill="#FF0000"></rect>
+                    <path d="M9 8l6 4-6 4V8z" fill="#fff"></path>
+                </svg>
+                <span>YouTube4Clone</span>
+            </a>
+        </div>
+
+        <div class="search">
+            <input id="searchInput" type="search" placeholder="Search" aria-label="Search videos">
+            <button id="searchBtn" aria-label="search">🔍</button>
+        </div>
+
+        <div class="right">
+            <button id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+            <img id="userAvatar" class="avatar" src="https://i.pravatar.cc/40?img=12" alt="user">
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li class="active">Home</li>
+                    <li>Explore</li>
+                    <li>Subscriptions</li>
+                    <li>Library</li>
+                </ul>
+            </nav>
+
+            <section class="categories">
+                <h4>Categories</h4>
+                <div class="chips" id="categoryList">
+                    <!-- JS will populate categories -->
+                </div>
+            </section>
+        </aside>
+
+        <main class="content">
+            <section class="hero">
+                <h2>Recommended</h2>
+                <p class="muted">Personalized videos powered by demo data & live images from Picsum</p>
+            </section>
+
+            <section class="videos" id="videosGrid" aria-live="polite">
+                <!-- JS will inject video cards here -->
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <small>Demo YouTube clone · Light & Dark mode · Images via Picsum & avatars via Pravatar</small>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
